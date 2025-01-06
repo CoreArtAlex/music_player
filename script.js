@@ -9,12 +9,16 @@ let isPlaying = false;
 // Play
 function playSong() {
   isPlaying = true;
+  playBtn.classList.replace('fa-circle-play', 'fa-circle-pause');
+  playBtn.setAttribute('title', 'Pause');
   music.play();
 }
 
 // Pause
 function pauseSong() {
   isPlaying = false;
+  playBtn.classList.replace('fa-circle-pause', 'fa-circle-play');
+  playBtn.setAttribute('title', 'Play');
   music.pause();
 }
 
